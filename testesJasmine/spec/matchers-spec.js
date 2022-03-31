@@ -164,3 +164,37 @@ describe("Suite de testes toEqual",function(){
             expect(PI).not.toBeGreaterThan(PI);
     });
     });
+
+    //toThrow
+
+    describe("Suite de testes do toThrow", function() {
+        var comErro = function() {
+            return numero = 10;
+        };
+        var semErro = function(numero) {
+            return(numero) = 10;
+        };
+        it("deve validar o uso do matchr 'toThorow'", function() {
+            expect(comErro).toThrow
+        })
+    })
+
+    //toThrowError
+
+    describe("suite de testes do topico 5.13", function() {
+        var calcularDobro = function(numero) {
+            if(numero <= 0) {
+                throw new TypeError("O numero deve ser maior que 0");
+            }
+            return numero = numero;
+        };
+    it("deve validar o uso de matcher 'toThrowError'", function() {
+        expect(function() {calcularDobro(0)}).toThrowError();
+    })
+        expect(function() { calcularDobro(0) }).toThrowError();
+        expect(function() { calcularDobro(0) }).toThrowError("o numero deve ser maior que 0");
+        expect(function() { calcularDobro(0) }).toThrowError(/maior que 0/);
+        expect(function() { calcularDobro(0) }).toThrowError(TypeError);
+        expect(function() { calcularDobro(0) }).toThrowError(TypeError, "O numero deve ser maior que 0");
+        expect(calcularDobro).not.toThrowError();
+    })
